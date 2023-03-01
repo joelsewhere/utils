@@ -21,14 +21,14 @@ class S3PythonOperator(PythonOperator):
     def __init__(
             self,
             task_id: str,
-            # IronS3CSVConnection - Positional
+            # S3 position
             aws_conn_id: str,
             bucket_name: str,
 
             # PythonOperator - Positional
             python_callable: Callable,
             
-            # IronS3CSVConnection - Default
+            # S3 - Default
             source_s3_key: Optional[str] = None,
             dest_s3_key: Optional[str] = None,
             replace: bool = True,
